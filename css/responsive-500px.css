@@ -1,0 +1,115 @@
+@media screen and (max-width:500px){
+.row{
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.container{
+	padding: 0 !important;
+}
+.home img{
+	height: 264px;
+  width: 100%;
+  margin: 0px;
+}
+
+.home ul{
+	margin-bottom: 5.3%;
+}
+.navbar-nav{
+	padding: 0px !important;
+}
+
+.navbar-collapse.collapse{
+	margin: 0px !important;
+}
+
+.video-background video{
+	margin-left: -29em !important;
+}
+
+#rotate{
+	height: 73px !important;
+}
+.home ul{
+	
+}
+
+.w3-sidenav{
+	width: 200px !important;
+}
+
+.w3-opennav i {
+	margin: 20px 10px !important;
+}
+
+.w3-sidenav ul li{
+	padding: 0px;
+	margin: 0px;
+}
+
+.video-background{
+	top: 0;
+	left: -364%;
+}
+
+.menu-items{
+	padding:0% 25% 0% 23% !important;
+}
+
+.starters{
+	height: 170px !important;
+	width: 170px !important;
+}
+
+.foot-left{
+	margin-left: 0px !important;
+}
+
+.form-group-7 input{
+	width: 100% !important;
+	margin: 0 !important;
+}
+
+.modal-header:before{
+ display: none;
+}
+
+.modal-header:after{
+  display: none;
+}
+
+.testimonial{
+	margin: 80px 10px 82px auto !important
+}
+
+.contact-us{
+	padding: 0 !important;
+}
+
+.phone-number{
+	padding: 0 !important;
+}
+
+.contact-address{
+	padding: 0 !important;
+}
+
+.email-address{
+	padding: 0 !important;
+}
+
+.contact-feedback{
+	padding: 0 !important;
+}
+
+.contact-map{
+	padding: 0 !important;
+}
+
+.feedback-wrapper{
+	padding: 2% 5% 5% 5% !important;
+}
+
+
+}

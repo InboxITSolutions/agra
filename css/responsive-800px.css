@@ -1,0 +1,44 @@
+@media screen and (max-width:800px){
+
+
+.w3-sidenav{
+	width: 300px;
+}
+
+
+
+.w3-sidenav ul li{
+	padding: 0px;
+	margin: 0px;
+}
+
+.video-background{
+	top: 0;
+	left: -364%;
+}
+
+.foot-left{
+	margin-left: 0px !important;
+}
+
+.form-group-7 input{
+	width: 50%;
+}
+
+.modal-header:before{
+ display: none;
+}
+
+.modal-header:after{
+  display: none;
+}
+
+.testimonial{
+	margin: 100px 72px 130px auto ;
+}
+
+.modal-dialog{
+	margin: 70px 34px;
+}
+
+}

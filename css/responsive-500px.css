@@ -8,9 +8,9 @@
 	padding: 0 !important;
 }
 .home img{
-	height: 264px;
-  width: 100%;
-  margin: 0px;
+	height: 100%;
+ 	width: 95%;
+	margin: 8em 0px 4em;
 }
 
 .home ul{
@@ -25,11 +25,11 @@
 }
 
 .video-background video{
-	margin-left: -29em !important;
+	width: 100% !important;
 }
 
 #rotate{
-	height: 73px !important;
+	height: 125px !important;
 }
 .home ul{
 	
@@ -112,4 +112,26 @@
 }
 
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  to {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
 }
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  to {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+}
+
+}
+

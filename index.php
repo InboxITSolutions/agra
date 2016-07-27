@@ -18,11 +18,6 @@
   <link rel="stylesheet" href="css/w3.css">
   <script type="text/javascript" src="js/testimonial.js"></script>
   <link rel='stylesheet prefetch' href='css/flickity.css'>
-  <!--<script type="text/javascript" src="js/navcolorchange.js"></script>-->
-  <link rel="stylesheet" href="css/owl.carousel.css">
-  <link rel="stylesheet" href="css/owl.theme.css">
-  <link type="text/css" rel="stylesheet" href="css/lightgallery.css" /> 
-  <script type="text/javascript" src="js/lg-fullscreen.min.js"></script>
   <script type="text/javascript" src="js/lg-thumbnail.min.js"></script>
 </head>
 <body>
@@ -49,8 +44,8 @@
                   <div>Desi Food</div> <div>Expereinced Chef</div> <div>Awesome taste</div> 
                   <div>Reasonable Price</div> 
                 </div>
-                <ul>
-                	<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <ul class="social">
+                	<li><a href="#"><i class="fa fa-facebook" aria-hidden="true" style="padding:6px 10px;"></i></a></li>
                 	<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
                 	<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
@@ -86,7 +81,7 @@
             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
             cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
-            <a href="#" style="text-align:center;"><button class="button" ><span>About Us </span></button></a>
+            <a href="about.php" style="text-align:center;"><button class="button" ><span>About Us </span></button></a>
           </div>
         </div>
       </div>
@@ -153,7 +148,7 @@
               </div>
               </a>
               <div class="col-xs-12 col-md-12 col-sm-12">
-            <a href="#" style="text-align:center;"><button class="button" style="color:#fff; margin-top: -3%;"><span>SEE MENU</span></button></a>
+            <a href="menu.php" style="text-align:center;"><button class="button" style="color:#fff; margin-top: -3%;"><span>SEE MENU</span></button></a>
             </div>
           </div>
           <!-- Modal -->
@@ -350,7 +345,7 @@
                   </div>
               </div> 
               <div class="col-xs-12 col-md-12 col-sm-12">
-            <a href="#" style="text-align:center;"><button class="button" style="margin: 5% 0% 3% 0%;"><span>SEE EVENTS</span></button></a>
+            <a href="event.php" style="text-align:center;"><button class="button" style="margin: 5% 0% 3% 0%;"><span>SEE EVENTS</span></button></a>
             </div>   
         </div>
       </div>
@@ -361,7 +356,7 @@
         <div class="row">
           <div class="col-xs-12 col-md-12 col-sm-12 book-table">
             <div class="main-title">
-            <div class="bg-image" style="margin-top:-36px;opacity:0.3 !important;">
+            <div class="bg-image" style="margin-top:-36px;opacity:0.2 !important;">
               <img src="images/logo-white.png" class="header-image" >
             </div>
             <h2 class="title" style="font-size:12.286mm !important;">BOOK A TABLE</h2>
@@ -508,64 +503,6 @@
         </div>
       </div>
     </section> -->
-    
-   
-   <!-- <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-md-12 col-sm-12 contact-us">
-          <div class="main-title">
-            <div class="bg-image" style="margin-top:-36px;opacity:0.3 !important;">
-              <img src="images/logo.png" class="header-image">
-            </div>
-            <h2 class="title">CONTACT US</h2>
-          </div>
-          <div class="col-xs-12 col-md-4 col-sm-4 phone-number">
-            <br/><br/><br/>
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <h3>Phone Number</h3>
-            <p>Land:123-456789</p>
-            <p>Mob:98091291</p>
-          </div>
-          <div class="col-xs-12 col-md-4 col-sm-4 contact-address">
-            <br/><br/><br/>
-            <i class="fa fa-home" aria-hidden="true"></i>
-            <h3>Contact Address</h3>
-            <p>XYZ Street,California</p>
-            <p>United States</p>
-          </div>
-          <div class="col-xs-12 col-md-4 col-sm-4 email-address">
-            <br/><br/><br/>
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            <h3>Email Address</h3>
-            <p>info@agra.com</p>
-            <p>contact@agra.com</p>
-          </div>
-          <div class="col-xs-12 col-md-12 col-sm-12 feedback-wrapper" >
-            <div class="col-xs-12 col-md-6 col-sm-6 contact-feedback">
-              <table cellpadding="5">
-                         <tr><td><company class="company">Leave Us Your Feedback</company></td></tr>
-                      <form action="#" method="post">
-                        <tr><td><input type="text" placeholder="  &#xf007;&nbsp; Your Name"></td></tr>
-                        <tr><td><input type="text" placeholder="  &#xf0e0;&nbsp; Your Email Address"></td></tr>
-                        <tr><td><input type="text" placeholder="  &#xf02d;&nbsp; Subject Of Your Message"></td></tr>
-                        <tr><td><textarea rows="7"  placeholder="  &#xf075;&nbsp; Drop Us A Message"></textarea></td></tr>
-                        <tr><td>
-                          <input type="submit" value="Submit Message" class="btn btn-default submit pull-left" 
-                          style="margin-bottom:0px !important;">
-                        
-                        </td></tr>
-                      </form>
-                </table>
-          </div>
-          <div class="col-xs-12 col-md-6 col-sm-6 contact-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55565170.29301636!2d-132.08532758867793!3d31.786060306224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2s!4v1466597708498" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-   </section> -->
   <?php include'includes/footer.php'; ?>
 </div>
 <script src='js/flickity.pkgd.min.js'></script>

@@ -1,0 +1,121 @@
+.menu{
+	text-align: center;
+    background: url(images/white.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    box-shadow:  0px 1em 5em 0px rgba(0, 0, 0, 0.3) inset;
+    padding: 2% 6% 5% !important;
+}
+button.accordion {
+    background: none;
+    color: #010101;
+    cursor: pointer;
+    padding: 0.2em;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: rgba(101, 101, 101, 0.1);
+}
+
+button.accordion:before {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    margin: 0px 5px;
+    background-color: #ccc;
+    padding: 3px;
+
+}
+
+button.accordion.active:before {
+    content: "\2796";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: rgba(101, 101, 101, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+    box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.3);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-bottom: 10px;
+
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+.category{
+	text-align: center;
+}
+.category h3{
+	font-family: Quikhand;
+    position: relative;
+    z-index: 10;
+    margin: 0.5em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 0 rgb(220, 7, 7);
+    font-size: 1.7rem;
+    letter-spacing: 0.2em;
+}
+
+.icon{
+	border: 1px solid #fff;
+	border-radius: 50%;
+	width: 25%;
+	margin: 0px auto;
+}
+.icon img{
+	padding: 1em;
+	width: 80px;
+}
+.starter .icon{
+    background-image: url('menu-icons/desert.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.all_column{
+	background: rgba(51, 51, 51, 0.1);
+	padding: 1em !important;
+}
+.column{
+	
+	padding: 1em !important;
+}
+.column_first{
+	
+}
+.column_second{
+	border-right: 1px solid rgba(248, 5, 5, 0.5);
+	border-left: 1px solid rgba(248, 5, 5, 0.5);
+}
+.column_third{
+}
+.category{
+	border-bottom: 1px solid rgba(248, 5, 5, 0.5);
+	padding: 1em 0em;
+}
+.accordion .item-price{
+	float: right;
+	margin-right: 1em;
+
+}
+.accordion .item-name{
+	color: #333;
+	text-shadow: 1px 0px 0px rgba(99, 99, 99, 0.49);
+
+}
+.icon_back{
+	position: absolute;
+}

@@ -21,14 +21,114 @@
   <script type="text/javascript" src="js/lg-thumbnail.min.js"></script>
 </head>
 <body>
+<?php
+  
+  include 'database/conn.php';
+
+  function getBanner(){
+  $query = mysql_query("SELECT * FROM banner LIMIT 1");
+
+  while ($row= mysql_fetch_assoc($query)) {
+    $src = $row['src'];
+    ?>
+    <video autoplay loop muted>
+            <source src="video/<?php echo $src; ?>" type="video/mp4"/>
+          </video>
+    <?php
+  }
+}
+
+  function getCategory(){
+
+  $query = mysql_query("SELECT * FROM category");
+
+  while ($row= mysql_fetch_assoc($query)) {
+    $cat_name= $row['name'];
+    $image_name= $row['image_name'];
+    ?>
+    <a href="#" data-toggle="modal" data-target="#<?php echo $cat_name; ?>">
+                <div class="col-xs-12 col-md-3 col-sm-3 starters">
+                  <div class="menu-icon"><img src="images/category/<?php echo $image_name; ?>"></div>
+                  <div class="menu-name"><h3><?php echo $cat_name; ?></h3></div>
+                </div>
+              </a>
+       <div id="<?php echo $cat_name; ?>" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span class="modal-title"><h2><?php echo $cat_name; ?></h2></span>
+                  </div>
+                  <div class="modal-body">
+                    <p>Samosa</p>
+                    <p>Tiika</p>
+                    <p>Chaat</p>
+                    <p>Pakouda</p>
+                    <p>Raita</p>
+                    <p>Bhajee</p>
+                    <p>Lolly pop</p>
+                    <p>Kabab</p>
+                  </div>
+                  <div class="modal-footer">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+
+    <?php
+  }
+}
+
+function getEvents(){
+ $query = mysql_query("SELECT * FROM event LIMIT 4");
+
+  while ($row= mysql_fetch_assoc($query)) {
+    $name = $row['name'];
+    $desc = $row['description'];
+    ?>
+    <div class="flip-3d col-xs-12 col-md-3 col-sm-12">
+                    <figure>
+                      <img src="images/events/<?php echo $name; ?>" alt>
+                      <figcaption>
+                        <?php echo $desc; ?>
+                      </figcaption>
+                    </figure>
+                  </div>
+    <?php
+  }
+}
+
+function getTestimonial(){
+ $query = mysql_query("SELECT * FROM testimonial");
+
+  while ($row= mysql_fetch_assoc($query)) {
+    $name = $row['name'];
+    $comment = $row['comment'];
+    $client_name = $row['client_name'];
+    $position = $row['position'];
+    ?>
+    <div class="gallery-cell">
+                <div class="testimonial">
+                  <img class="testimonial-avatar" src="images/testimonial/<?php echo $name; ?>">
+                  <q class="testimonial-quote"><?php echo $comment; ?></q>
+                  <span class="testimonial-author"><?php echo $client_name; ?>,<?php echo $position; ?></span>
+                </div>
+              </div>
+    <?php
+  }
+}
+
+
+
+?>
   <section id="video">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12 col-sm-12">
         <div class="video-background">
-          <video autoplay loop muted>
-            <source src="video/bg.mp4" type="video/mp4"/>
-          </video>
+          <?php getBanner(); ?>
         </div>
       </div>
     </div>
@@ -99,209 +199,11 @@
             </div>
             <h2 class="title">MENU</h2>
           </div>
-              <a href="#" data-toggle="modal" data-target="#starters">
-                <div class="col-xs-12 col-md-3 col-sm-3 starters">
-                  <div class="menu-icon"><img src="menu-icons/starter.png"></div>
-                  <div class="menu-name"><h3>Starters</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#sweets">
-              <div class="col-xs-12 col-md-3 col-sm-3 starters sweets">
-                  <div class="menu-icon"><img src="menu-icons/sweet.png"></div>
-                  <div class="menu-name"><h3>Sweets</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#beverage">
-              <div class="col-xs-12 col-md-3 col-sm-3 starters beverage">
-                  <div class="menu-icon"><img src="menu-icons/beverage.png"></div>
-                  <div class="menu-name"><h3>Beverage</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#desert">            
-              <div class="col-xs-12 col-md-3 col-sm-3 starters desert">
-                  <div class="menu-icon"><img src="menu-icons/dessert.png"></div>
-                  <div class="menu-name"><h3>Desert</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#kulfi">
-              <div class="col-xs-12 col-md-3 col-sm-3 starters">
-                  <div class="menu-icon"><img src="menu-icons/kulfi.png"></div>
-                  <div class="menu-name"><h3>Kulfi</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#salads">
-              <div class="col-xs-12 col-md-3 col-sm-3 starters sweets">
-                  <div class="menu-icon"><img src="menu-icons/salad.png"></div>
-                  <div class="menu-name"><h3>Salad</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#beverage">
-              <div class="col-xs-12 col-md-3 col-sm-3 starters beverage">
-                  <div class="menu-icon"><img src="menu-icons/beverage.png"></div>
-                  <div class="menu-name"><h3>Beverage</h3></div>
-              </div>
-              </a>
-              <a href="#" data-toggle="modal" data-target="#desert">            
-              <div class="col-xs-12 col-md-3 col-sm-3 starters desert">
-                  <div class="menu-icon"><img src="menu-icons/dessert.png"></div>
-                  <div class="menu-name"><h3>Desert</h3></div>
-              </div>
-              </a>
+             <?php getCategory(); ?>
               <div class="col-xs-12 col-md-12 col-sm-12">
             <a href="menu.php" style="text-align:center;"><button class="button" style="color:#fff; margin-top: -3%;"><span>SEE MENU</span></button></a>
             </div>
           </div>
-          <!-- Modal -->
-            <div id="starters" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span class="modal-title"><h2>STARTERS</h2></span>
-                  </div>
-                  <div class="modal-body">
-                    <p>Samosa</p>
-                    <p>Tiika</p>
-                    <p>Chaat</p>
-                    <p>Pakouda</p>
-                    <p>Raita</p>
-                    <p>Bhajee</p>
-                    <p>Lolly pop</p>
-                    <p>Kabab</p>
-                  </div>
-                  <div class="modal-footer">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div id="sweets" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span class="modal-title"><h2>Sweets</h2></span>
-                  </div>
-                  <div class="modal-body">
-                    <p>Rasbarri</p>
-                    <p>laddu</p>
-                    <p>Gajar Haluwa</p>
-                    <p>Rasgulla</p>
-                    <p>Jalebi</p>
-                    <p>Kheer</p>
-                    <p>Sevai</p>
-                    <p>Peda</p>
-                  </div>
-                  <div class="modal-footer">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-             <!-- Modal -->
-            <div id="beverage" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span class="modal-title"><h2>Beverage</h2></span>
-                  </div>
-                  <div class="modal-body">
-                    <p>Lassi</p>
-                    <p>Buttermilk</p>
-                    <p>Badam Milk</p>
-                    <p>Kesar Milk</p>
-                    <p>Rose Milk</p>
-                    <p>Falooda</p>
-                    <p>Sharbat</p>
-                    <p>Kanji</p>
-                  </div>
-                  <div class="modal-footer">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div id="desert" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span class="modal-title"><h2>Beverage</h2></span>
-                  </div>
-                  <div class="modal-body">
-                    <p>Sandesh</p>
-                    <p>Modak</p>
-                    <p>Aam Shrikhand</p>
-                    <p>Payasam</p>
-                    <p>Kaju ka barfi</p>
-                    <p>Shahi Tukda</p>
-                    <p>Phirni</p>
-                    <p>Ras malai</p>
-                  </div>
-                  <div class="modal-footer">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div id="kulfi" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span class="modal-title"><h2>Kulfi</h2></span>
-                  </div>
-                  <div class="modal-body">
-                    <p>Mango kulfi</p>
-                    <p>Almond kulfi</p>
-                    <p>Pista kulfi</p>
-                    <p>Cranberry kulfi</p>
-                    <p>Rose kulfi</p>
-                    <p>Butter kulfi</p>
-                    <p>Strawberry kulfi</p>
-                    <p>Matka kulfi</p>
-                  </div>
-                  <div class="modal-footer">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Modal -->
-            <div id="salads" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <span class="modal-title"><h2>Salads</h2></span>
-                  </div>
-                  <div class="modal-body">
-                    <p>Mixed salad</p>
-                    <p>Grilled Veggi salad</p>
-                    <p>Masala iddli</p>
-                    <p>Spinach Couscous salad</p>
-                    <p>Cucumber salad</p>
-                    <p>Kale and Tofu salad</p>
-                    <p>Carrot and Moong Dal salad</p>
-                    <p>Arugula And Melon salad</p>
-                  </div>
-                  <div class="modal-footer">
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            
         </div>
       </div>
     </section>
@@ -317,32 +219,7 @@
             <h2 class="title">EVENTS</h2>
             </div>
               <div>
-                
-                  <div class="flip-3d col-xs-12 col-md-3 col-sm-12">
-                    <figure>
-                      <img src="images/music.jpg" alt>
-                      <figcaption><b>EVERY</b><br>SATURDAY<br>TUESDAY<br>FRIDAY</figcaption>
-                    </figure>
-                  </div>
-  
-                  <div class="flip-3d col-xs-12 col-md-3 col-sm-12">
-                    <figure>
-                      <img src="images/sanjeev.jpeg" alt>
-                      <figcaption>ENJOY SPECIAL FOODS THIS JUNE-02</figcaption>
-                    </figure>
-                  </div>
-                  <div class="flip-3d col-xs-12 col-md-3 col-sm-12">
-                    <figure>
-                      <img src="images/hour.jpg" alt>
-                      <figcaption><b>SPECIAL OFFERS</b><br>FROM 3:00PM TO 6:PM</figcaption>
-                    </figure>
-                  </div>
-                  <div class="flip-3d col-xs-12 col-md-3 col-sm-12">
-                    <figure>
-                      <img src="images/night.jpg" alt>
-                      <figcaption>CELEBRATE WITH US<br>JULY 19th</figcaption>
-                    </figure>
-                  </div>
+                <?php getEvents(); ?>
               </div> 
               <div class="col-xs-12 col-md-12 col-sm-12">
             <a href="event.php" style="text-align:center;"><button class="button" style="margin: 5% 0% 3% 0%;"><span>SEE EVENTS</span></button></a>
@@ -387,27 +264,7 @@
             <h2 class="title" style="font-size:12.286mm !important;">HAPPY CUSTOMERS</h2>
             </div> -->
             <div class="main-gallery">
-              <div class="gallery-cell">
-                <div class="testimonial">
-                  <img class="testimonial-avatar" src="images/person2.jpg">
-                  <q class="testimonial-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla."</q>
-                  <span class="testimonial-author">Joe Smith, CEO of Cubix</span>
-                </div>
-              </div>
-              <div class="gallery-cell">
-                <div class="testimonial">
-                  <img class="testimonial-avatar" src="images/person1.jpg">
-                  <q class="testimonial-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla."</q>
-                  <span class="testimonial-author">Lisa Jones, Freelance Web Developer</span>
-                </div>
-              </div>
-              <div class="gallery-cell">
-                <div class="testimonial">
-                  <img class="testimonial-avatar" src="images/person2.jpg">
-                  <q class="testimonial-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mauris ex, gravida ut leo eu, rhoncus porta orci. Fusce vitae rutrum nulla."</q>
-                  <span class="testimonial-author">Ryan Waltz, Front-End Developer</span>
-                </div>
-              </div>
+              <?php getTestimonial(); ?>
             </div>
           </div>
         </div>

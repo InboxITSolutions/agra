@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteRule ^dashboard?$ dashboard.php
+RewriteRule ^category?$ category.php
+RewriteRule ^banner?$ banner.php
+RewriteRule ^create?$ create.php
+RewriteRule ^events?$ events.php
+RewriteRule ^testimonial?$ testimonial.php
+RewriteRule ^createevents?$ createEvents.php
+RewriteRule ^createtestimonial?$ createtestimonial.php
+RewriteRule ^logout?$ logout.php
